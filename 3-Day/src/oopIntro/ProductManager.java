@@ -1,4 +1,4 @@
-
+package oopIntro;
 public class ProductManager {
 
     public void addToCart(Product product) {
