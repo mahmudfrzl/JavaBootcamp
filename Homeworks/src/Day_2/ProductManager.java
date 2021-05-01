@@ -1,4 +1,4 @@
-package Day_2;
+package Day__2;
 
 public class ProductManager {
 
