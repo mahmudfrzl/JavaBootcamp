@@ -1,3 +1,4 @@
+package Day_2;
 
 public class Category {
 
