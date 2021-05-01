@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\hp\OneDrive - Khazar University\Desktop\JavaKodlama\JavaBootCamp\Bootcamp\.metadata\.plugins\org.eclipse.jdt.core
+881759862.index
