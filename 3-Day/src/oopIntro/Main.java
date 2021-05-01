@@ -21,6 +21,9 @@ public class Main {
         category2.setName("Yiyecek");
         System.out.println(category1.getName());
         System.out.println(category2.getName());
+        
+        ProductManager productManager = new ProductManager();
+        productManager.addToCart(product1);
 
 	}
 
