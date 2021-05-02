@@ -10,6 +10,9 @@ public class Student extends User {
 	public Student(int numberofCommentInCourse,String courseStatus) {
 		this.numberofCommentInCourse=numberofCommentInCourse;
 		this.courseStatus=courseStatus;
+		
+		//user id
+		//fName&lName
 	}
 
 	public int getNumberofCommentInCourse() {
