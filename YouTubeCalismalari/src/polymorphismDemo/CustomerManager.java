@@ -12,6 +12,6 @@ public class CustomerManager {
 	}
 	public void add() {
 		System.out.println("Musteri eklendi");
-		 this.logger.log("Log Mesaji");
+		 logger.log("Log Mesaji");
 	}
 }

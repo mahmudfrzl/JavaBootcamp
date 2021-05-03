@@ -8,6 +8,8 @@ public class Main {
 		KrediUI krediUI = new KrediUI();
 		//krediUI.Kredihesapla(new OgretmenKrediManager());
 		krediUI.Kredihesapla(new AskerKrediManager());
+		
+	
 
 	}
 
