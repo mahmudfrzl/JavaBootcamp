@@ -6,10 +6,13 @@ public class Main {
 		ProductManager manager = new ProductManager();
 		Product product = new Product();
 		product.price=10;
-		product.name="dgjndgfn ";
+		product.name="dgjndgfn "; 
 		manager.add(product);
 		
 		DatabaseHelper.Connection.createConnection();
+		
+		
+		
 
 	}
 

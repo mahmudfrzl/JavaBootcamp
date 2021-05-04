@@ -1,6 +1,7 @@
 package Interfaces;
 
 public class CustomerManager {
+	
 	ICustomerDal customerDal;
 	
 	public CustomerManager(ICustomerDal customerDal) {
@@ -8,8 +9,7 @@ public class CustomerManager {
 	}
 	
 	public void add() {
-		customerDal.add();
+		customerDal.Add();
 	}
-	
 		
 }

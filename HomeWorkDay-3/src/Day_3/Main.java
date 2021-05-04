@@ -25,6 +25,9 @@ public class Main {
 		InstructorManager instructorManager = new InstructorManager();
 		instructorManager.add(instructor);
 		
+		UserManager userManager = new UserManager();
+		userManager.addMail(instructor);
+		
 
 	}
 
