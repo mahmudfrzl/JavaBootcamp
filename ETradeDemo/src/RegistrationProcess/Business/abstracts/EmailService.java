@@ -3,6 +3,6 @@ package RegistrationProcess.Business.abstracts;
 import RegistrationProcess.Entities.Concretes.User;
 
 public interface EmailService {
-	boolean isValidation(User user);
-	boolean isVerify(User user);
+	boolean isValidation(String email);
+	boolean isVerify(String email);
 }

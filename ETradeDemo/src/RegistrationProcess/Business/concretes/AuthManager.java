@@ -9,13 +9,6 @@ import RegistrationProcess.Entities.Concretes.User;
 
 public class AuthManager implements AuthService {
 
-	public static final Pattern VALID_EMAIL_ADDRESS_REGEX = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$",
-			Pattern.CASE_INSENSITIVE);
-
-	public static boolean validate(String emailStr) {
-		Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailStr);
-		return matcher.find();
-	}
 
 	ArrayList<User> users = new ArrayList<>();
 
@@ -25,8 +18,8 @@ public class AuthManager implements AuthService {
 	}
 
 	@Override
-	public boolean ifChechkPassword(User user) {
-		if (user.getPassword().length() < 6) {
+	public boolean ifChechkPassword(String password) {
+		if (password.length() < 6) {
 			System.out.println("Sifre en az 6 basamakli olmali,lutfen yeniden islemlere baslayin!");
 			return false;
 		}
@@ -34,15 +27,7 @@ public class AuthManager implements AuthService {
 
 	}
 
-	@Override
-	public boolean checkEmail(User user) {
-		for (User u : users) {
-			if (u.getEmail() == user.getEmail()) {
-				return false;
-			}
-		}
-		return true;
-	}
+
 
 	@Override
 	public boolean loginCheck(String email, String password) {
@@ -57,8 +42,8 @@ public class AuthManager implements AuthService {
 
 
 	@Override
-	public boolean isPasswordAndEmailEmpty(User user) {
-		if (user.getEmail() == null && user.getPassword() == null) {
+	public boolean isPasswordAndEmailEmpty(String email,String password) {
+		if (email == null && password == null) {
 			System.out.println("Kullanici adi ve ya parola eksik!");
 			return false;
 		}
@@ -66,12 +51,24 @@ public class AuthManager implements AuthService {
 	}
 
 	@Override
-	public boolean ifNameCheck(User user) {
-		if(user.getFirstName().length()<2 && user.getLastName().length()<2) {
+	public boolean ifNameCheck(String firstName,String lastName) {
+		if(firstName.length()<2 && lastName.length()<2) {
 			System.out.println("Kullanici ismi ve soy ismi en az 2 karakterden olusmali!");
 			return false;
 		}
 		return true;
+		
+		
 	}
 
+	@Override
+	public boolean isValidEmail(String email) {
+		String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." + "[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-z"
+				+ "A-Z]{2,7}$";
+
+		Pattern pat = Pattern.compile(emailRegex);
+		if (email == null)
+			return false;
+		return pat.matcher(email).matches();
+	}
 }
