@@ -24,9 +24,9 @@ public class Main {
 		System.out.println("--- KAMPANYALARIN BASLANMASI ---");
 		
 		CampaignManager campaignManager = new CampaignManager();
-		Campaign campaign1 = new Campaign("Ramazan Bayrami", "3", 1500, "16.04.2020", "05.05.2020", 10);
-		Campaign campaign2 = new Campaign("Bahar", "2", 2356, "24.07.2020", "12.08.2020", 20);
-		Campaign campaign3 = new Campaign("Kýþ", "3", 5000, "21.10.2020", "07.01.2021", 25);
+		Campaign campaign1 = new Campaign("Ramazan Bayrami", "3", "16.04.2020", "05.05.2020", 10);
+		Campaign campaign2 = new Campaign("Bahar", "2",  "24.07.2020", "12.08.2020", 20);
+		Campaign campaign3 = new Campaign("Kýþ", "3",  "21.10.2020", "07.01.2021", 25);
 
 		campaignManager.add(campaign1);
 		campaignManager.add(campaign2);
@@ -37,6 +37,7 @@ public class Main {
 		
 
 		GameManager gameManager = new GameManager();
+	
 		Game game = new Game(5, "CsGo", 1246235, 2345, 5000, 132445);
 		Game game1 = new Game(5, "Valorant", 34667, 2352, 500, 123452);
 		Game game2 = new Game(12, "FiFa 2020", 1200, 32354, 3245, 16752);
@@ -47,7 +48,7 @@ public class Main {
 		gameManager.delete(game, gamer1);
 		
 		System.out.println("\n");
-		System.out.println("---OYUNLARIN SATIN ALINMASI");
+		System.out.println("---OYUNLARIN SATIN ALINMASI---");
 		SaleManager saleManager = new SaleManager();
 		saleManager.campaignIntegrationInSales(game2, campaign1, gamer1);
 		saleManager.saleOfGame(game, gamer2);

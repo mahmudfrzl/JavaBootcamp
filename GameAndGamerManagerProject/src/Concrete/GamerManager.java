@@ -6,11 +6,7 @@ import Entitles.Gamer;
 
 public class GamerManager implements GamerService {
 		private GamerCheckService gamerCheckService;
-		
-		
-		
-		
-		
+			
 
 		public GamerManager(GamerCheckService gamerCheckService) {
 			

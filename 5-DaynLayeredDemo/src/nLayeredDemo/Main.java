@@ -17,6 +17,8 @@ public class Main {
 		Product product = new Product(1,2,"Alma",12,50);
 		
 		productService.add(product);
+		
+		
 	}
 
 }

@@ -8,11 +8,11 @@ public class Campaign {
 	String dueDate;
 	String startDate;
 	
-	public Campaign(String name, String numberOfCampaign, double awardOfCampaign, String dueDate, String startDate,double percent) {
+	public Campaign(String name, String numberOfCampaign,  String dueDate, String startDate,double percent) {
 		
 		this.name = name;
 		this.numberOfCampaign = numberOfCampaign;
-		this.awardOfCampaign = awardOfCampaign;
+		
 		this.dueDate = dueDate;
 		this.startDate = startDate;
 		this.percent=percent;

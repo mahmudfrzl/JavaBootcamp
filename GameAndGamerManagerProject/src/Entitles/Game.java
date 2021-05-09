@@ -6,7 +6,6 @@ public class Game {
 	double price;
 	int numberOfCurrentPlayer;
 	int numberOfSales;
-
 	int numberThRecipientOfTheGame;
 	
 	public Game(int id,String name, double price, int numberOfCurrentPlayer, int numberOfSales, int numberThRecipientOfTheGame) {
