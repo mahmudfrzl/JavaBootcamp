@@ -16,8 +16,9 @@ public class UserManager implements UserService {
 	private AuthService authService;
 	private GoogleCheckService googleCheckService;
 
-	public UserManager(EmailService emailService, UserDao dao, AuthService authService) {
+	public UserManager(EmailService emailService, UserDao dao, AuthService authService,GoogleCheckService googleCheckService) {
 		super();
+		this.googleCheckService=googleCheckService;
 		this.dao = dao;
 		this.emailService = emailService;
 		this.authService = authService;
@@ -26,11 +27,11 @@ public class UserManager implements UserService {
 
 	@Override
 	public void register(User user) {
-		if (!authService.ifChechkPassword(user.getPassword())
-				|| (!authService.isPasswordAndEmailEmpty(user.getEmail(), user.getPassword())
-						|| (!authService.ifNameCheck(user.getFirstName(), user.getLastName()))
+		if (authService.ifChechkPassword(user.getPassword())
+				|| (authService.isPasswordAndEmailEmpty(user.getEmail(), user.getPassword())
+						|| (authService.ifNameCheck(user.getFirstName(), user.getLastName()))
 						
-				|| (!authService.isValidEmail(user.getEmail()))))
+				|| (authService.isValidEmail(user.getEmail()))))
 
 		{
 			System.out.println("Kullanici bilgileri hatali girilmistir");

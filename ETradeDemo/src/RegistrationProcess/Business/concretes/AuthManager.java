@@ -32,11 +32,11 @@ public class AuthManager implements AuthService {
 	@Override
 	public boolean loginCheck(String email, String password) {
 		for (User user : users) {
-			if (user.getEmail() == email && user.getPassword() == password) {
-				return true;
+			if (user.getEmail() == email || user.getPassword() == password) {
+				return false;
 			}
 		}
-		return false;
+		return true;
 	}
 
 
