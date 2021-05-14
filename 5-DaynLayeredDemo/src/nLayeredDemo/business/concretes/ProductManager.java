@@ -30,7 +30,7 @@ public class ProductManager implements ProductService{
 			return;
 		}
 		this.productDao.add(product);
-		this.loggerService.logToSystem("Urun eklendi" + product.getName());
+		this.loggerService.logToSystem("Urun eklendi : " + product.getName());
 
 	}
 
