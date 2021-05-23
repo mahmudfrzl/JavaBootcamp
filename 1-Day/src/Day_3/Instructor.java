@@ -18,7 +18,4 @@ public class Instructor extends User {
 	public void setSertifcate(String sertifcate) {
 		this.sertifcate = sertifcate;
 	}
-	
-	
-	
 }
